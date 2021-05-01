@@ -7,8 +7,8 @@
         {
             "type": "pwa-msedge",
             "request": "launch",
-            "name": "Open main.html",
-            "file": "d:\\Administrator\\Self_Study\\My own project\\PORTFOLIO\\main.html"
+            "name": "Open index.html",
+            "file": "d:\\Administrator\\Self_Study\\My own project\\PORTFOLIO\\index.html"
         }
     ]
 }
