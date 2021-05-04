@@ -5,7 +5,8 @@
     <title>Nam's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Here is a page you can find quick information about Pham Giang Nam.">
-    <link rel="stylesheet" href="css/style.css">    
+    <link rel="stylesheet" href="css/style.css">   
+    <link rel="stylesheet" href="css/gallery.css">  
     <link rel="stylesheet" href="css/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -101,55 +102,106 @@
   </div>
 
   <!-- Container (Portfolio Section) -->
-  <div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <!-- <div class="w3-content w3-container w3-padding-64" id="portfolio"> -->
+  <div class="w3-auto w3-container w3-padding-64" id="portfolio">
     <h2 class="w3-center", style="font-weight:700">MY WORK</h2>
     <p class="w3-center"><em>Here you can find some of my works.<br>(Click on the images to make them bigger)</em></p><br>
-
-    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-    <div class="w3-row-padding w3-center">
-      <div class="w3-col m3">
-        <img src="/images/mywork/PowerBI1.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
+    <!-- Full-width images with number text -->
+    <div class="container">
+      <div class="mySlides">
+          <div class="numbertext">1 / 12</div>
+          <img src="images/mywork/PowerBI1.JPG" style="width:100%">
+      </div>
+      
+      <div class="mySlides">
+          <div class="numbertext">2 / 12</div>
+          <img src="images/mywork/PowerBI2.JPG" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+          <div class="numbertext">3 / 12</div>
+          <img src="images/mywork/PowerBI3.JPG" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+          <div class="numbertext">4 / 12</div>
+          <img src="images/mywork/PowerBI4.JPG" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+          <div class="numbertext">5 / 12</div>
+          <img src="images/mywork/PowerBI5.JPG" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+          <div class="numbertext">6 / 12</div>
+          <img src="images/mywork/PowerBI6.JPG" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+          <div class="numbertext">7 / 12</div>
+          <img src="images/mywork/PowerBI7.JPG" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">8 / 12</div>
+        <img src="images/mywork/PowerBI8.JPG" style="width:100%">
       </div>
 
-      <div class="w3-col m3">
-        <img src="/images/mywork/PowerBI2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
+      <div class="mySlides">
+        <div class="numbertext">9 / 12</div>
+        <img src="images/mywork/PowerBI9.JPG" style="width:100%">
       </div>
 
-      <div class="w3-col m3">
-        <img src="/images/mywork/PowerBI9.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
+      <div class="mySlides">
+        <div class="numbertext">10 / 12</div>
+        <img src="images/mywork/PowerBI10.JPG" style="width:100%">
       </div>
 
-      <div class="w3-col m3">
-        <img src="/images/mywork/PowerBI11.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
-      </div>
-    </div>
-
-    <div class="w3-row-padding w3-center w3-section">
-      <div class="w3-col m3">
-        <img src="/images/mywork/PowerBI3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+      <div class="mySlides">
+        <div class="numbertext">11 / 12</div>
+        <img src="images/mywork/PowerBI11.JPG" style="width:100%">
       </div>
 
-      <div class="w3-col m3">
-        <img src="/images/mywork/PowerBI8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+      <div class="mySlides">
+        <div class="numbertext">12 / 12</div>
+        <img src="images/mywork/PowerBI12.JPG" style="width:100%">
       </div>
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-      <div class="w3-col m3">
-        <img src="/images/mywork/PowerBI10.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+      <!-- Image text --> 
+      <div class="caption-container">
+        <p id="caption"></p>
       </div>
-
-      <div class="w3-col m3">
-        <img src="/images/mywork/PowerBI12.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+      <!-- Thumbnail images -->
+      <div class="row", style="box-sizing: border-box;line-height: 5px;">
+        <div class="column">
+          <img class="demo cursor" src="images/mywork/PowerBI1.JPG" style="width:100%" 
+          onclick="currentSlide(1)" alt="Apple's stock price from 2010 - 2017">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/mywork/PowerBI2.JPG" style="width:100%" 
+          onclick="currentSlide(2)" alt="Apple's stock price by Year (2010 - 2011)">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/mywork/PowerBI4.JPG" style="width:100%" 
+          onclick="currentSlide(4)" alt="Apple's stock price by Year (2012 - 2013)">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/mywork/PowerBI6.JPG" style="width:100%" 
+          onclick="currentSlide(6)" alt="Apple's stock price by Year (2014 - 2017)">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/mywork/PowerBI10.JPG" style="width:100%" 
+          onclick="currentSlide(9)" alt="Apple's stock price by Quarter (Q1 - Q2)">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/mywork/PowerBI12.JPG" style="width:100%" 
+          onclick="currentSlide(12)" alt="Apple's stock price by Month (January)">
+        </div>
       </div>
-      <button class="w3-button w3-padding-large w3-button-orange" style="margin-top:64px">LOAD MORE</button>
-    </div>
-  </div>
-
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-    <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption" class="w3-opacity w3-large"></p>
     </div>
   </div>
 
@@ -208,7 +260,6 @@
     <div class="w3-xxlarge w3-section">
       <a href="https://www.facebook.com/mot.it.hh2/"><i class="fa fa-facebook-official w3-hover-opacity w3-margin-right"></iframe></i></a>
       <a href="https://www.instagram.com/pgnam__/"><i class="fa fa-instagram w3-hover-opacity w3-margin-right"></i></a>
-      <i class="fa fa-laptop w3-hover-opacity w3-margin-right"></i>
       <a href="https://www.linkedin.com/in/phamgiangnam/"><i class="fa fa-linkedin w3-hover-opacity w3-margin-right"> </i></a>
     </div>
     <i class="w3-margin-bottop">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a> </i>
@@ -243,6 +294,37 @@
       } else {
           x.className = x.className.replace(" w3-show", "");
       }
+  }
+
+  // Gallery
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
   }
   </script>
 
