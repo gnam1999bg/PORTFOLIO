@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Save the Dog!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Menu Screen -->
+    <div id="menu-screen" class="screen active">
+        <div class="menu-container">
+            <div class="game-title">
+                <span class="title-icon">🐕</span>
+                <h1>Save the Dog!</h1>
+                <p class="subtitle">Draw lines to protect the puppy</p>
+            </div>
+            <button id="play-btn" class="btn btn-primary" onclick="showLevelSelect()">
+                ▶ Play
+            </button>
+            <button class="btn btn-secondary" onclick="showHowToPlay()">
+                ? How to Play
+            </button>
+        </div>
+    </div>
+
+    <!-- How to Play Screen -->
+    <div id="howto-screen" class="screen">
+        <div class="howto-container">
+            <h2>How to Play</h2>
+            <div class="howto-steps">
+                <div class="step">
+                    <span class="step-icon">✏️</span>
+                    <p><strong>Draw</strong> lines by clicking and dragging on the screen</p>
+                </div>
+                <div class="step">
+                    <span class="step-icon">🛡️</span>
+                    <p>Your lines become <strong>solid barriers</strong> that block threats</p>
+                </div>
+                <div class="step">
+                    <span class="step-icon">🐝</span>
+                    <p>Protect the dog from <strong>bees, lava, and spikes</strong></p>
+                </div>
+                <div class="step">
+                    <span class="step-icon">⭐</span>
+                    <p>Use <strong>less ink</strong> for a higher star rating!</p>
+                </div>
+            </div>
+            <button class="btn btn-primary" onclick="showMenu()">Got it!</button>
+        </div>
+    </div>
+
+    <!-- Level Select Screen -->
+    <div id="level-screen" class="screen">
+        <div class="level-container">
+            <h2>Select Level</h2>
+            <div id="level-grid" class="level-grid"></div>
+            <button class="btn btn-secondary" onclick="showMenu()">← Back</button>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+        <div class="game-hud">
+            <button class="hud-btn" onclick="showLevelSelect()">✕</button>
+            <div class="level-info">
+                <span id="level-label">Level 1</span>
+                <span id="threat-label" class="threat-badge"></span>
+            </div>
+            <div class="ink-meter">
+                <span>Ink:</span>
+                <div class="ink-bar-bg">
+                    <div id="ink-bar" class="ink-bar"></div>
+                </div>
+            </div>
+            <button class="hud-btn" onclick="resetLevel()">↺</button>
+        </div>
+        <canvas id="game-canvas"></canvas>
+        <div id="game-message" class="game-message hidden">
+            <div class="message-content">
+                <div id="message-icon" class="message-icon"></div>
+                <h2 id="message-title"></h2>
+                <div id="message-stars" class="stars"></div>
+                <p id="message-text"></p>
+                <div class="message-buttons">
+                    <button class="btn btn-secondary" onclick="resetLevel()">↺ Retry</button>
+                    <button id="next-btn" class="btn btn-primary" onclick="nextLevel()">Next →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
